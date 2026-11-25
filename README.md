@@ -1,6 +1,22 @@
 ## Slide
 [Here](https://www.canva.com/design/DAGVOvVE1ow/wTKvuP2OnyLuvr4aAwtM-A/edit)
 
+## Setup
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Create a local `.env` file from the example and fill in your values:
+   ```bash
+   cp .env.example .env
+   ```
+3. Required environment variables:
+   - `PRIVATE_KEY`: base58-encoded Solana wallet secret key (mint authority/payer). **Never commit this value.**
+   - `PUBLIC_KEY`: recipient wallet public key used by the app.
+   - `TOKEN_MINT_ADDRESS`: SPL token mint address.
+
+> Security note: if a secret key was previously committed, treat it as compromised. Rotate/revoke it and remove it from Git history.
 
 ## Assignment
 1. Complete the functions in `mintTokens.ts` and `burnTokens.ts` to mint and burn tokens.
